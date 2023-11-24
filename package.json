@@ -2,14 +2,15 @@
   "name": "@dofy/popclip-extension-cli",
   "version": "1.0.0",
   "description": "Command Line Tools for Developing PopClip Extensions",
+  "main": "bin/index.js",
+  "bin": {
+    "popclip": "./bin/index.js"
+  },
   "keywords": [
     "popclip",
     "extension",
     "cli"
   ],
-  "bin": {
-    "popclip": "./bin/index.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dofy/popclip-extension-cli.git"
@@ -20,16 +21,23 @@
   },
   "homepage": "https://github.com/dofy/popclip-extension-cli#readme",
   "license": "MIT",
-  "private": false,
-  "type": "module",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node ./bin/index.js",
+    "lint": "eslint './src/*.{js,ts}' --fix"
   },
   "devDependencies": {
     "@types/node": "^20.9.5",
-    "typescript": "^5.3.2"
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^40.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
-    "chalk": "^5.3.0"
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0"
   }
 }

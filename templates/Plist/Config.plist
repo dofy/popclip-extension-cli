@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PList Config -->
+<!-- DOCS: https://www.popclip.app/dev/packages -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Version</key>
+    <!-- replace your extension version -->
+    <integer>1</integer>
+    <key>Extension Name</key>
+    <!-- replace your extension name -->
+    <string>{EXT_NAME}</string>
+    <key>Extension Identifier</key>
+    <!-- change your extension id -->
+    <string>your.domain.popclip.extension.{EXT_ID}</string>
+    <key>Extension Description</key>
+    <!-- and description -->
+    <string>{EXT_DESCRIPTION}</string>
+    <key>Actions</key>
+    <!-- for more infomation visit https://github.com/pilotmoon/PopClip-Extensions -->
+    <array>
+      <dict>
+        <key>URL</key>
+        <string>https://phpz.xyz/popclip/{popclip text}</string>
+        <key>Image File</key>
+        <string>icon.png</string>
+        <key>Title</key>
+        <string>{ACTION_NAME}</string>
+        <key>Regular Expression</key>
+        <string> (?s)^.{1,777}$</string>
+      </dict>
+    </array>
+  </dict>
+</plist>

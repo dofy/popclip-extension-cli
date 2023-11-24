@@ -1,19 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-
-    "module": "commonjs",
-    "rootDir": "./src",
-    "paths": {
-      "@*": ["./src/*"]
-    },
-    "outDir": "./bin",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "rootDir": "src",
+    "outDir": "bin",
     "strict": true,
-    "skipLibCheck": true,
-    "moduleResolution": "node"
+    "target": "es6",
+    "module": "commonjs",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist/**/*"]
+  "include": ["src/**/*"]
 }
