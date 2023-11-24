@@ -3,7 +3,7 @@
 ## Usage
 
 ```bash
-phpclip [command] [options] [extension name]
+phpcliper [command] [options] [extension name]
 
 - command: create | build | install | remove | help
 - options: -h | --help | -v | --version

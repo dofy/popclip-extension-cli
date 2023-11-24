@@ -1,14 +1,22 @@
 #!/usr/bin/env node
 
-import chalk from 'chalk'
 import { Command } from 'commander'
-
 import { getPackageInfo } from './utils'
+import chalk from 'chalk'
+import ora from 'ora'
 
-console.log(chalk.green('Hello world!'), getPackageInfo('version'))
+const spinner = ora()
 
 const program = new Command()
 
-program.version('0.0.1').description('A CLI for generating React components')
+spinner.start(chalk.green('Loading unicorns'))
+
+program
+  .version(getPackageInfo('version') as string)
+  .description(getPackageInfo('descreption') as string)
+
+program.command('create').action((ExtensionName) => {
+  console.log('create', ExtensionName, process.argv)
+})
 
 program.parse(process.argv)
